@@ -17,5 +17,247 @@ namespace WeekOfNov6th
             InitializeComponent();
         }
 
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            double hi;
+            if (rtbOutput.Text != "")
+            {
+                rtbOutput.Text += "\n";
+            }
+            if (double.TryParse(txtInput1.Text, out hi) == true || double.TryParse(txtInput2.Text, out hi) == true)
+            {
+                if (txtInput1.Text != "")
+                {
+                    double tryNum = double.Parse(txtInput1.Text);
+                    if(rdoTempConverter1.Checked == true)
+                    {
+                        rtbOutput.Text += "Input 1: Celsius to Fahrenheit is " + ((tryNum * 9 / 5) + 32) + "\n";
+                    }else if (rdoTempConverter2.Checked == true)
+                    {
+                        rtbOutput.Text += "Input 1: Fahrenheit to Celsius is " + ((tryNum - 32) * 5 / 9) + "\n";
+                    }
+                }
+                if (txtInput2.Text != "")
+                {
+                    double tryNum = double.Parse(txtInput2.Text);
+                    if (rdoTempConverter1.Checked == true)
+                    {
+                        rtbOutput.Text += "Input 2: Celsius to Fahrenheit is " + ((tryNum * 9 / 5) + 32) + "\n";
+                    }
+                    else if (rdoTempConverter2.Checked == true)
+                    {
+                        rtbOutput.Text += "Input 2: Fahrenheit to Celsius is " + ((tryNum - 32) * 5 / 9) + "\n";
+                    }
+                }
+                
+                
+            }else
+            {
+                rtbOutput.Text += "Please input a convertable number!\n\n";
+            }
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            double hi;
+            if (double.TryParse(txtInput1.Text, out hi) == true || double.TryParse(txtInput2.Text, out hi) == true)
+            {
+                if (txtInput1.Text != "")
+                {
+                    double heyy = double.Parse(txtInput1.Text);
+                    if (cmbMoneyConverter.Text == "Dollar - Yen")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} dollars is " + (heyy * 149.77) + " in yen\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Yen - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} yen is " + (heyy * 0.0067) + " in dollars\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Euro")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} dollars is " + (heyy * 0.93) + " in euros\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Euro - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} euros is " + (heyy * 1.07) + " in dollar\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Peso")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} dollars is " + (heyy * 17.54) + " in pesos\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Peso - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} pesos is " + (heyy * 0.057) + " in dollars\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Rupee")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} dollars is " + (heyy * 83.22) + " in rupees\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Rupee - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} rupees is " + (heyy * 0.012) + " in dollars\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Real")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} dollars is " + (heyy * 4.90) + " in reals\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Real - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 1: {txtInput1.Text} reals is " + (heyy * 0.20) + " in dollars\n";
+                    }
+                }
+                if (txtInput2.Text != "")
+                {
+                    double heyy = double.Parse(txtInput2.Text);
+                    if (cmbMoneyConverter.Text == "Dollar - Yen")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} dollars is " + (heyy * 149.77) + " in yen\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Yen - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} yen is " + (heyy * 0.0067) + " in dollars\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Euro")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} dollars is " + (heyy * 0.93) + " in euros\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Euro - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} euros is " + (heyy * 1.07) + " in dollar\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Peso")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} dollars is " + (heyy * 17.54) + " in pesos\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Peso - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} pesos is " + (heyy * 0.057) + " in dollars\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Rupee")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} dollars is " + (heyy * 83.22) + " in rupees\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Rupee - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} rupees is " + (heyy * 0.012) + " in dollars\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Dollar - Real")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} dollars is " + (heyy * 4.90) + " in reals\n";
+                    }
+                    if (cmbMoneyConverter.Text == "Real - Dollar")
+                    {
+                        rtbOutput.Text += $"Input 2: {txtInput2.Text} reals is " + (heyy * 0.20) + " in dollars\n";
+                    }
+
+                }
+            }else
+            {
+                rtbOutput.Text += "Please input a convertable number!\n";
+            }
+
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            double hi;
+
+            if (double.TryParse(txtInput1.Text, out hi) == true || double.TryParse(txtInput2.Text, out hi) == true)
+            {          
+                if (txtInput1.Text != "")
+                {
+                    double one = double.Parse(txtInput1.Text);
+                    if (chkMileToKilo.Checked == true)
+                    {
+                        rtbOutput.Text += $"Input 1: Converting {txtInput1.Text} from Miles to Kilometers is " + (one * 1.60934);
+                    }
+                    if (chkMileToKilo.Checked == true && chkMeterToInch.Checked == true)
+                    {
+                        rtbOutput.Text += " / ";
+                    }
+                    if (chkMeterToInch.Checked == true)
+                    {
+                        rtbOutput.Text += $"Converting {txtInput1.Text} from Meters to Inches is " + (one * 39.3701);
+                    }   
+                }
+                if (txtInput2.Text != "")
+                {
+                    double two = double.Parse(txtInput2.Text);
+                    rtbOutput.Text += "\n";
+                    if (chkMileToKilo.Checked == true)
+                    {
+                        rtbOutput.Text += $"Input 2: Converting {txtInput2.Text} from Miles to Kilometers is " + (two * 1.60934);
+                    }
+                    if (chkMileToKilo.Checked == true && chkMeterToInch.Checked == true)
+                    {
+                        rtbOutput.Text += " / ";
+                    }
+                    if (chkMeterToInch.Checked == true)
+                    {
+                        rtbOutput.Text += $"Converting {txtInput2.Text} from Meters to Inches is " + (two * 39.3701);
+                    }
+                }
+                
+            }
+            else
+            {
+                rtbOutput.Text += "Please input a convertable number!\n";
+            }
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            double hi;
+            if (rtbOutput.Text != "")
+            {
+                rtbOutput.Text += "\n";
+            }
+            if (double.TryParse(txtInput1.Text, out hi) == true || double.TryParse(txtInput2.Text, out hi) == true)
+            {
+                if (txtInput1.Text != "")
+                {
+                    double one = double.Parse(txtInput1.Text);
+                    if (chkKiloToMiles.Checked == true)
+                    {
+                        rtbOutput.Text += $"Input 1: Converting {txtInput1.Text} from Kilometers to Miles is " + (one * 0.621371);
+                    }
+                    if (chkMileToKilo.Checked == true && chkMeterToInch.Checked == true)
+                    {
+                        rtbOutput.Text += " / ";
+                    }
+                    if (chkInchToMeter.Checked == true)
+                    {
+                        rtbOutput.Text += $"Converting {txtInput1.Text} from Inches to Meters is " + (one * 0.0254);
+                    }
+                }
+                if (txtInput2.Text != "")
+                {
+                    double two = double.Parse(txtInput2.Text);
+                    rtbOutput.Text += "\n";
+                    if (chkKiloToMiles.Checked == true)
+                    {
+                        rtbOutput.Text += $"Input 2: Converting {txtInput1.Text} from Kilometers to Miles is " + (two * 0.621371);
+                    }
+                    if (chkMileToKilo.Checked == true && chkMeterToInch.Checked == true)
+                    {
+                        rtbOutput.Text += " / ";
+                    }
+                    if (chkInchToMeter.Checked == true)
+                    {
+                        rtbOutput.Text += $"Converting {txtInput1.Text} from Inches to Meters is " + (two * 0.0254);
+                    }
+                }
+
+            }
+            else
+            {
+                rtbOutput.Text += "Please input a convertable number!\n";
+            }
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            rtbOutput.Text = "";
+        }
     }
 }
