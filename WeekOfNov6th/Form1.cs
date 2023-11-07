@@ -221,7 +221,7 @@ namespace WeekOfNov6th
                     {
                         rtbOutput.Text += $"Input 1: Converting {txtInput1.Text} from Kilometers to Miles is " + (one * 0.621371);
                     }
-                    if (chkMileToKilo.Checked == true && chkMeterToInch.Checked == true)
+                    if (chkKiloToMiles.Checked == true && chkInchToMeter.Checked == true)
                     {
                         rtbOutput.Text += " / ";
                     }
@@ -236,15 +236,15 @@ namespace WeekOfNov6th
                     rtbOutput.Text += "\n";
                     if (chkKiloToMiles.Checked == true)
                     {
-                        rtbOutput.Text += $"Input 2: Converting {txtInput1.Text} from Kilometers to Miles is " + (two * 0.621371);
+                        rtbOutput.Text += $"Input 2: Converting {txtInput2.Text} from Kilometers to Miles is " + (two * 0.621371);
                     }
-                    if (chkMileToKilo.Checked == true && chkMeterToInch.Checked == true)
+                    if (chkKiloToMiles.Checked == true && chkInchToMeter.Checked == true)
                     {
                         rtbOutput.Text += " / ";
                     }
                     if (chkInchToMeter.Checked == true)
                     {
-                        rtbOutput.Text += $"Converting {txtInput1.Text} from Inches to Meters is " + (two * 0.0254);
+                        rtbOutput.Text += $"Converting {txtInput2.Text} from Inches to Meters is " + (two * 0.0254);
                     }
                 }
 
