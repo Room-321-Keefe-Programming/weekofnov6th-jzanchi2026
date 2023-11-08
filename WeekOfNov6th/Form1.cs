@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace WeekOfNov6th
 {
@@ -258,6 +259,39 @@ namespace WeekOfNov6th
         private void btn5_Click(object sender, EventArgs e)
         {
             rtbOutput.Text = "";
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            string line = System.IO.File.ReadAllText("test.txt.txt");
+
+            rtbOutput.Text += line + "\n\n";
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            int n;
+
+            //this line of code came from Mr. L if you are wondering why it's not streamreader
+            string line = System.IO.File.ReadAllText("test.txt.txt");
+
+            string[] arr = line.Split(' ');
+            rtbOutput.Text += "The length is " + arr.Length + "\n";
+
+            if (int.TryParse(txtInput1.Text, out n) && n > 0)
+            {
+                int hey = int.Parse(txtInput1.Text);
+
+                List<string> selectedWords = new List<string>();
+
+                for (int i = n - 1; i < arr.Length; i += n)
+                {
+                    selectedWords.Add(arr[i]);
+                }
+
+                rtbOutput.Text += string.Join(" ", selectedWords);
+            }
+
         }
     }
 }

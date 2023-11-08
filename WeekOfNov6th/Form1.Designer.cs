@@ -49,6 +49,8 @@
             this.chkKiloToMiles = new System.Windows.Forms.CheckBox();
             this.btn4 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
+            this.btn7 = new System.Windows.Forms.Button();
             this.grpTempConverter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -309,12 +311,40 @@
             this.btn5.UseVisualStyleBackColor = false;
             this.btn5.Click += new System.EventHandler(this.btn5_Click);
             // 
+            // btn6
+            // 
+            this.btn6.BackColor = System.Drawing.Color.SeaShell;
+            this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.ForeColor = System.Drawing.Color.IndianRed;
+            this.btn6.Location = new System.Drawing.Point(614, 365);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(165, 31);
+            this.btn6.TabIndex = 21;
+            this.btn6.Text = "Text Load";
+            this.btn6.UseVisualStyleBackColor = false;
+            this.btn6.Click += new System.EventHandler(this.btn6_Click);
+            // 
+            // btn7
+            // 
+            this.btn7.BackColor = System.Drawing.Color.SeaShell;
+            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.ForeColor = System.Drawing.Color.IndianRed;
+            this.btn7.Location = new System.Drawing.Point(614, 409);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(165, 31);
+            this.btn7.TabIndex = 22;
+            this.btn7.Text = "Count";
+            this.btn7.UseVisualStyleBackColor = false;
+            this.btn7.Click += new System.EventHandler(this.btn7_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(1061, 648);
+            this.Controls.Add(this.btn7);
+            this.Controls.Add(this.btn6);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn4);
             this.Controls.Add(this.chkKiloToMiles);
@@ -366,6 +396,8 @@
         private System.Windows.Forms.CheckBox chkKiloToMiles;
         private System.Windows.Forms.Button btn4;
         private System.Windows.Forms.Button btn5;
+        private System.Windows.Forms.Button btn6;
+        private System.Windows.Forms.Button btn7;
     }
 }
 
