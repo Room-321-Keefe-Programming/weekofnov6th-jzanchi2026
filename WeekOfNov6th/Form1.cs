@@ -293,5 +293,40 @@ namespace WeekOfNov6th
             }
 
         }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            char[] alphabet = new char[26];
+            for (int i = 0; i < alphabet.Length; i++)
+            {
+                if (i == 0 || i == 4 || i == 8 || i == 14 || i == 20)
+                {
+                    alphabet[i] = (char)('A' + i);
+                }else
+                {
+                    alphabet[i] = (char)('a' + i);
+                }
+                
+                rtbOutput.Text += alphabet[i] + " ";
+            }
+            rtbOutput.Text += "\n\n";
+
+            int hyy = alphabet.Length - 1;
+            int count = 0;
+            while (hyy >= 0)
+            {
+                char alpha = alphabet[hyy];
+                if (count % 5 == 0)
+                {
+                    rtbOutput.Text += (char.ToLower(alpha) + ", ");
+                }else
+                {
+                    rtbOutput.Text += (char.ToUpper(alpha) + " ");
+                }
+                count++;
+                hyy--;
+            }
+
+        }
     }
 }
